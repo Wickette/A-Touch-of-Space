@@ -22,7 +22,7 @@ export default function UsersData() {
 
   return (
     <>
-      <MDBCard style={{ maxWidth: '50rem' }}>
+      <MDBCard style={{ maxWidth: '50rem'}}>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src={Data.url} fluid alt='...' />
         <a>
