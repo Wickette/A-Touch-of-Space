@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { LikeButton } from '@lyket/react';
 import './pod.css'
+import axios from 'axios';
 
-export default function UsersData() {
-  console.log(process.env.REACT_APP_API_KEY)
+export default function ApodContainer() {
   const [Data, fetchData] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const getData = () => {
-    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}`)
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res)
-        fetchData(res)
-      })
+    axios.get(`${process.env.REACT_APP_BASEURL}${process.env.REACT_APP_NASA_API_KEY}`)
+      .then((res) => fetchData(res.data))
+      .catch((error) => console.log(error))
   }
   useEffect(() => {
     getData()
@@ -20,28 +18,24 @@ export default function UsersData() {
 
   return (
     <>
-      <div id='POD' className="card" style={{width: '100rem'}}>
-        <div className="row no-gutters">
-          <div className="col-md-7">
-            <img src={Data.url} alt="nasa" />
-            <rect width="100%" height="100%" fill="#868e96" />
-          </div>
-          <div style={{margin: 'auto 0'}} className="col-md-5">
-            <div className="card-body">
-              <h5 style={{marginBottom: '6rem'}} className="card-title">{Data.title}</h5>
-              <p className="card-text">
-                {Data.explanation}
-              </p>
-              <LikeButton
-            component={LikeButton.templates.Twitter}
-          />
-            </div>
-          </div>
+    <div id='POD' className="card" style={{width: '100rem'}}>
+    <div className="row no-gutters">
+      <div className="col-md-7">
+        <img src={Data.url} alt="nasa" />
+      </div>
+      <div style={{margin: 'auto 0'}} className="col-md-5">
+        <div className="card-body">
+          <h5 style={{marginBottom: '6rem'}} className="card-title">{Data.title}</h5>
+          <p className="card-text">
+            {Data.explanation}
+          </p>
+          <LikeButton
+        component={LikeButton.templates.Twitter}
+      />
         </div>
+      </div>
     </div>
-       
-
-   
+  </div> 
     </>
   )
 }
