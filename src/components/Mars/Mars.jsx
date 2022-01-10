@@ -40,8 +40,8 @@ export default function MarsContainer() {
 
     return (
         <div>
-            <dialog open className="relative mt-20 rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8 relative bg-black">
-                <h1 className='bg-white p-3'>{Data[0].caption}</h1>
+            <dialog open className="mt-20 rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8 relative bg-black">
+                <h1 className='bg-white p-3'>These images were taken by NASA's EPIC camera onboard the NOAA DSCOVR spacecraft</h1>
                  <div className="grid lg:grid-cols-5 justify-center justify-items-center">
                     {newData.map((value, index) => {
                         return     <div className="max-w-xs mx-4 mb-2 rounded-lg shadow-lg">

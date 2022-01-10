@@ -15,10 +15,11 @@ export default function ApodContainer() {
   }, [])
 
   return (
-    <div>
+    <div id='POD'>
       <div className="bg-black bg-opacity-80">
       <div className="flex justify-center items-center">
         <dialog open className="relative rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8">
+        <h1 className='bg-white p-3'>NASA's Picture of the Day</h1>
           <div className="flex flex-col lg:flex-row">
             <div className="relative h-64 sm:h-80 w-full lg:h-auto lg:w-1/3 xl:w-2/5 flex-none">
               <iframe src={Data.url} title="nasa-api" className="absolute inset-0 h-full w-full object-cover"/>
@@ -31,15 +32,15 @@ export default function ApodContainer() {
                   <p>{Data.date}</p>
                   <h3 className="text-xl font-bold mb-5">{Data.title}</h3>
                   <p>{Data.explanation}</p>
-                    <LikeButton
-                    id='my-first-feed'
-                    namespace='nasa-app-POD'
-                    component={LikeButton.templates.Twitter}
-                    />
                 </div>
               </div>
             </div>
           </div>
+                   <LikeButton
+                    id='my-first-feed'
+                    namespace='nasa-app-POD'
+                    component={LikeButton.templates.Twitter}
+                    />
         </dialog>
       </div>
     </div>

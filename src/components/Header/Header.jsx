@@ -10,8 +10,8 @@ export default function App() {
             <div className='text-white'>
               <img style={{height:'100px'}} src={logo} alt='logo' className='mb-6'></img>
               <h4 style={{fontStyle:'italic'}} className='mb-5'>Take a quick break from your busy day and learn a bit about space</h4>
-              <a style={{color: 'white', border:'#FFF9A6 solid 1px'}} className='btn btn-lg mars-info' href='#POD' role='button'>
-                Jump to NASA's picture of the day
+              <a style={{color: 'black', border:'#FFF9A6 solid 1px', backgroundColor: '#FFF9A6'}} className='btn btn-lg mars-info' href='#POD' role='button'>
+                Jump to the feed
               </a>
             </div>
           </div>
