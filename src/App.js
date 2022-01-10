@@ -10,7 +10,7 @@ function App() {
       <Particles
         options={{
           background: {
-            color: "#181A18"
+            color: "#00000"
           },
           fpsLimit: 60,
           interactivity: {
