@@ -1,4 +1,5 @@
 import POD from './components/POD/POD'
+import Mars from './components/Mars/Mars'
 import './App.css';
 import Header from './components/Header/Header'
 import Particles from 'react-tsparticles';
@@ -58,6 +59,7 @@ function App() {
       />
       <Header/>
       <POD/>
+      <Mars/>
     </div>
   );
 }

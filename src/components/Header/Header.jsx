@@ -1,5 +1,4 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
 import logo from './logo-space.png'
 
 export default function App() {
