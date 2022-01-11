@@ -19,10 +19,10 @@ export default function ApodContainer() {
       <div className="bg-black bg-opacity-80">
       <div className="flex justify-center items-center">
         <dialog open className="relative rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8">
-        <h1 className='bg-white p-3'>NASA's Picture of the Day</h1>
+        <h1 className='bg-white p-3 text-center'>NASA's Picture of the Day</h1>
           <div className="flex flex-col lg:flex-row">
             <div className="relative h-64 sm:h-80 w-full lg:h-auto lg:w-1/3 xl:w-2/5 flex-none">
-              <iframe src={Data.url} title="nasa-api" className="absolute inset-0 h-full w-full object-cover"/>
+              <embed src={Data.url} title="nasa-api" className="absolute inset-0 h-full w-full object-cover"/>
               <span className="absolute block inset-x-0 bottom-0 lg:hidden lg:inset-y-0 lg:right-auto bg-gradient-to-t lg:bg-gradient-to-r from-white to-transparent w-full h-16 lg:h-full lg:w-16"></span>
               <div className="relative flex justify-end lg:justify-start flex-wrap text-white text-xl font-bold m-4"></div>
             </div>
@@ -36,11 +36,9 @@ export default function ApodContainer() {
               </div>
             </div>
           </div>
-                   <LikeButton
-                    id='my-first-feed'
-                    namespace='nasa-app-POD'
-                    component={LikeButton.templates.Twitter}
-                    />
+            <div className='flex justify-center'>
+              <LikeButton id='my-first-feed' namespace='nasa-app-POD' component={LikeButton.templates.Twitter}/>
+            </div>
         </dialog>
       </div>
     </div>

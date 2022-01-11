@@ -1,5 +1,5 @@
 import POD from './components/POD/POD'
-import Mars from './components/Mars/Mars'
+import Epic from './components/Epic/Epic'
 import './App.css';
 import Header from './components/Header/Header'
 import Particles from 'react-tsparticles';
@@ -7,7 +7,7 @@ import Particles from 'react-tsparticles';
 function App() {
   return (
     <div className="App">
-      <Particles
+      <Particles className='particles-js'
         options={{
           background: {
             color: "#000"
@@ -59,7 +59,7 @@ function App() {
       />
       <Header/>
       <POD/>
-      <Mars/>
+      <Epic/>
     </div>
   );
 }
