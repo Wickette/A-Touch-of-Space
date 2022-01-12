@@ -59,7 +59,6 @@ function App() {
       />
       <Header/>
       <POD/>
-      <Epic/>
     </div>
   );
 }

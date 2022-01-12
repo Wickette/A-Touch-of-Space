@@ -2,8 +2,28 @@ import React, { useState, useEffect } from 'react'
 import { LikeButton } from '@lyket/react';
 import axios from 'axios';
 
+
+function getDate () {
+    let today = new Date();
+    let dd = today.getDate() - 1
+    let mm = today.getMonth() + 1
+    
+    let yyyy = today.getFullYear();
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+    let todayFormat = yyyy + '/' + mm + '/' + dd;
+    return todayFormat
+}
+
+
 export default function MarsContainer() {
     const [Data, setData] = useState([])
+
+    let todayNew = getDate()
 
     const getData = () => {
         axios.get(`https://api.nasa.gov/EPIC/api/natural/images?api_key=Yor2F94EAmTaKqXUiQz5FPyZPVCeF6tJHmiNsh7w&feedtype=json&ver=1.0`)
@@ -13,19 +33,6 @@ export default function MarsContainer() {
     useEffect(() => {
         getData()
     }, [])
-
-    let today = new Date();
-    let dd = today.getDate() - 1
-    let mm = today.getMonth() + 1
-
-    let yyyy = today.getFullYear();
-    if (dd < 10) {
-        dd = '0' + dd;
-    }
-    if (mm < 10) {
-        mm = '0' + mm;
-    }
-    let todayNew = yyyy + '/' + mm + '/' + dd;
 
     const newData = Data.map(({image, date})=> ['https://epic.gsfc.nasa.gov/archive/natural/' + todayNew + '/png/' + image + '.png', date]) 
 
