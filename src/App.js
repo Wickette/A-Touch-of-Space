@@ -1,8 +1,10 @@
+import React from 'react'
 import POD from './components/POD/POD'
-import Epic from './components/Epic/Epic'
+import Calendar from './components/Calendar/Calendar'
 import './App.css';
 import Header from './components/Header/Header'
 import Particles from 'react-tsparticles';
+
 
 function App() {
   return (
@@ -58,6 +60,7 @@ function App() {
         }}
       />
       <Header/>
+      <Calendar/>
       <POD/>
     </div>
   );
