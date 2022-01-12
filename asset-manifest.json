@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/a-touch-of-space/static/css/main.69a92490.css",
-    "main.js": "/a-touch-of-space/static/js/main.fc8a0106.js",
+    "main.js": "/a-touch-of-space/static/js/main.431d0091.js",
     "static/js/787.f865314c.chunk.js": "/a-touch-of-space/static/js/787.f865314c.chunk.js",
     "static/media/logo-space.png": "/a-touch-of-space/static/media/logo-space.7f09f58d2cc0a3caefa9.png",
     "index.html": "/a-touch-of-space/index.html",
     "main.69a92490.css.map": "/a-touch-of-space/static/css/main.69a92490.css.map",
-    "main.fc8a0106.js.map": "/a-touch-of-space/static/js/main.fc8a0106.js.map",
+    "main.431d0091.js.map": "/a-touch-of-space/static/js/main.431d0091.js.map",
     "787.f865314c.chunk.js.map": "/a-touch-of-space/static/js/787.f865314c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.69a92490.css",
-    "static/js/main.fc8a0106.js"
+    "static/js/main.431d0091.js"
   ]
 }
