@@ -3,13 +3,14 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import dayjs from 'dayjs';
 import axios from 'axios';
+import { LikeButton } from '@lyket/react';
 
 export default function Sample() {
 
   const [value, onChange] = useState(new Date());
-    let selectedDate = dayjs(value).format('YYYY-MM-DD')
+  let selectedDate = dayjs(value).format('YYYY-MM-DD')
 
-    const [Data, setData] = useState([])
+  const [Data, setData] = useState([])
 
   const getData = async () => {
     await axios.get(`${process.env.REACT_APP_BASEURL}${process.env.REACT_APP_NASA_API_KEY}&date=${selectedDate}`)
@@ -22,17 +23,20 @@ export default function Sample() {
   })
 
   return (
-    <div className="Sample relative">
-      <header>
-        <h1>react-calendar sample page</h1>
+    <div className="relative">
+      <div className='flex justify-center items-center flex-col'>
+      <header className='text-center'>
+        <h1>Choose an APOD from a specific date</h1>
+        <p>*Please note: Days selected must be in the past </p>
       </header>
-      <div className="Sample__container">
-        <main className="Sample__container__content">
-          <Calendar
+      <div>
+        <main>
+          <Calendar 
             onChange={onChange}
             value={value}
           />
         </main>
+      </div>
       </div>
           <div className="flex justify-center items-center">
             <dialog open className="relative rounded-2xl overflow-hidden p-0 w-auto max-w-7xl md:mx-auto md:w-2/3 shadow-lg m-8">
@@ -54,7 +58,7 @@ export default function Sample() {
                 </div>
               </div>
               <div className='flex justify-center'>
-                {/* <LikeButton id='my-first-feed' namespace='nasa-app-POD' component={LikeButton.templates.Twitter} /> */}
+                <LikeButton id='my-first-feed' namespace='nasa-app-POD' component={LikeButton.templates.Twitter} />
               </div>
             </dialog>
           </div>
