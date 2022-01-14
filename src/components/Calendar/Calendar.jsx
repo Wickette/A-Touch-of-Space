@@ -25,11 +25,11 @@ export default function Sample() {
   })
 
   return (
-    <div className="relative">
+    <div className="relative" id='POD'>
       <div className='flex justify-center items-center flex-col'>
       <header className='text-center'>
-        <h1>Choose an APOD from a specific date</h1>
-        <p>*Please note: Days selected must be in the past </p>
+        <h1 style={{color: 'white'}}>Choose an APOD from a specific date</h1>
+        <p style={{color: 'white', fontStyle: 'italic'}}>*Please note: Days selected must be in the past </p>
       </header>
       <div>
         <main>

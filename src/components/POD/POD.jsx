@@ -55,7 +55,7 @@ export default function ApodContainer() {
   let newOrder = Data.reverse()
 
   return (
-    <div id='POD'>
+    <div>
       {newOrder.map((value, index) => {
         return <div className="bg-black bg-opacity-80 " key={index}>
           <div className="flex justify-center items-center">
