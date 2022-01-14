@@ -3,12 +3,14 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import dayjs from 'dayjs';
 import axios from 'axios';
-import { LikeButton } from '@lyket/react';
+// import { LikeButton } from '@lyket/react';
+import LikeButton from '../likeButton/LikeButton';
 
 export default function Sample() {
 
   const [value, onChange] = useState(new Date());
   let selectedDate = dayjs(value).format('YYYY-MM-DD')
+  console.log(selectedDate)
 
   const [Data, setData] = useState([])
 
@@ -58,7 +60,7 @@ export default function Sample() {
                 </div>
               </div>
               <div className='flex justify-center'>
-                <LikeButton id='my-first-feed' namespace='nasa-app-POD' component={LikeButton.templates.Twitter} />
+                <LikeButton/>
               </div>
             </dialog>
           </div>

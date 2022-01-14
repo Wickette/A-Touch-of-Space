@@ -1,6 +1,7 @@
 import React from 'react'
 import POD from './components/POD/POD'
 import Calendar from './components/Calendar/Calendar'
+import LikeButton from './components/likeButton/LikeButton'
 import './App.css';
 import Header from './components/Header/Header'
 import Particles from 'react-tsparticles';

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { LikeButton } from '@lyket/react';
+// import { LikeButton } from '@lyket/react';
 import axios from 'axios';
+import LikeButton from '../likeButton/LikeButton';
 
 function startDateFunction() {
   let today = new Date();
-  let dd = today.getDate()
+  let dd = today.getDate() -1
   let mm = today.getMonth() + 1
 
   let yyyy = today.getFullYear();
@@ -19,7 +20,7 @@ function startDateFunction() {
 }
 function endDateFunction() {
   let today = new Date();
-  let dd = today.getDate() - 7
+  let dd = today.getDate() - 8
   let mm = today.getMonth() + 1
 
   let yyyy = today.getFullYear();
@@ -38,6 +39,8 @@ let endDate = endDateFunction()
 
 export default function ApodContainer() {
   const [Data, setData] = useState([])
+  console.log(startDate)
+  console.log(endDate)
 
   const getData = async () => {
     await axios.get(`${process.env.REACT_APP_BASEURL}${process.env.REACT_APP_NASA_API_KEY}&start_date=${endDate}&end_date=${startDate}`)
@@ -75,7 +78,7 @@ export default function ApodContainer() {
                 </div>
               </div>
               <div className='flex justify-center'>
-                <LikeButton id='my-first-feed' namespace='nasa-app-POD' component={LikeButton.templates.Twitter} />
+                <LikeButton/>
               </div>
             </dialog>
           </div>
