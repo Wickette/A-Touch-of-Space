@@ -41,8 +41,9 @@
   https://wickette.github.io/a-touch-of-space/
   
   ### GitHub Code URL
-  
+  https://github.com/Wickette/a-touch-of-space.git
   
   ## Images
+  ![atouchofspace](https://user-images.githubusercontent.com/87992263/149640246-4a024e22-40e8-4179-b959-9151873782b9.png)
 
   
